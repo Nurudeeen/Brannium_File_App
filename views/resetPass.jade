@@ -1,0 +1,15 @@
+extends layout
+.nav
+    block nav 
+      ul.main-menu
+        li
+          a(href='/') Home
+
+block content
+  .any
+    form(action="/resetPassword", method="post" )
+      input(type="password", name="currentPass" placeholder="Current Password" )
+      input(type="password", name="newPass" placeholder="New Password")
+      input(type="password", name="confirmNewPass" placeholder="Confirm New Password" )
+      input(type="submit" name="ChangePassword" value="Change Password" style="width: 250px; ")
+    p #{msg}

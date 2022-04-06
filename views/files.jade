@@ -1,0 +1,28 @@
+extends layout
+.nav
+  block nav 
+      ul
+        li
+          a(href='/') Home
+block content
+    .any
+        table
+            each item in result
+                tr
+                    td 
+                        a(href="Files/"+item._id style="float: left; font-weight: bold;") #{item.originalname}
+                        
+                        //div hi
+                    td.options
+                        ul
+                            li
+                                a(href="/Files") >>
+                                ul.submenu
+                                    li
+                                        a(href="move/"+item._id style=" font-weight: bold;") Move File
+                                    li
+                                        a(href="send/"+item._id style=" font-weight: bold;") Send File
+                                    li
+                                        a(href="DeleteFile/"+item._id style=" font-weight: bold;") Delete
+                                    
+                       

@@ -1,0 +1,14 @@
+extends layout
+.nav
+  block nav
+      ul
+        li
+          a(href='loginform') Login
+        li
+          a(href='registerform') Register
+  
+block content
+  .any
+    h1.title= title
+    p(style="color: red;") #{msg}
+    block form
